@@ -1,15 +1,27 @@
-from flask import Flask
+from flask import Flask, redirect, url_for, request, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+def index():  # put application's code here
+    return render_template("static/views/loginView.html")
 
-@app.route('/testLogin')
+
+@app.route('/login', methods=['POST', 'GET'])
+def login_index():
+    if request.method == 'POST':
+        print("success")
+        return redirect(url_for('login'))
+    else:
+        print("error")
+
+
+@app.route('/success')
 def login():
-    return 'login测试'
+    print("重定向成功")
+    return 'success'
+
 
 if __name__ == '__main__':
     app.run()
