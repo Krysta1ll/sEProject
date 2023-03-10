@@ -1,0 +1,28 @@
+
+#header {
+    height: 20px;
+    width: auto;
+    border: 2px solid;
+}
+
+#h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+#loginBlock {
+    text-align: center;
+
+
+}
+
+#loginText {
+    font-size: 25px;
+    text-align: left;
+    font-family: SimSong;
+}
+
+#submitBtn {
+    height: 40px;
+    width: 60px;
+}

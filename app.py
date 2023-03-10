@@ -5,13 +5,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():  # put application's code here
-    return render_template("loginView.html")
+    return render_template("sysLoginPage.html")
 
 
 @app.route('/login', methods=['POST', 'GET'])
 def login_index():
     if request.method == 'POST':
-
         print("success")
         return redirect(url_for('login'))
     else:

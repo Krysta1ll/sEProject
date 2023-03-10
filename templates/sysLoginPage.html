@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>欢迎访问图书借阅系统</title>
+    <link href="../static/css/sysLoginPageStyle.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
+
 <header>
-    <div style="height: 20px;width:auto;border:2px solid">
-        此页面仍处于开发状态中，开发结束之后删除该div
+    <div id="header">
+        <marquee direction="right">---此页面仍处于开发状态中，开发结束之后删除该div---</marquee>
     </div>
-
-
 </header>
+
+<div id="loginBlock">
+    <p id="h1">欢迎来到智能图书借阅系统</p>
+
+    <form id="loginForm" action="http://127.0.0.1:5000/login" method="post">
+        <input type="text" id="userName"/>用户名<br>
+        <input type="password" id="password"/>密码<br>
+        <input type="submit" value="登录" id="submitBtn">
+    </form>
+
+    <p id="registerText">还未注册？点击按钮注册</p>
+    <form id="toRegister" action="http://127.0.0.1:5000/register" method="post">
+        <input type="button" value="注册">
+    </form>
+
+
+</div>
+
+
 </body>
 </html>
